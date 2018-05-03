@@ -1,0 +1,259 @@
+
+h1{
+    font-family: 'Lora' , sans-serif; 
+    letter-spacing: -1px;
+    color : #b6bad6; 
+    width: 100%;
+    text-align: center;
+    
+}
+h2 { 
+    font-family: 'Lora', serif; 
+    letter-spacing: 1px;
+    color: b6bad6;
+}
+h3 { 
+    font-family: 'Lora', serif; 
+    letter-spacing: 1px;
+    color: b6bad6;
+}
+.italic {
+    font-style: italic;
+    font-family: 'Playfair Display', sans-serif; 
+vertical-align: middle;
+}
+footer{
+
+    text-align: center;
+    color: #ff5252;
+}
+.center{
+    text-align: center;
+}
+.container-wrapper { 
+    /*background-color: #fdf2f9;*/
+    background-color: #026E71;
+background-image: url("http://ingridkuhn.com/themes/liebe_html/css/../img/ornaments/bgtexture1.png");
+background-size: cover;
+background-attachment: fixed;  
+overflow-x: hidden !important;  
+-webkit-overflow-scrolling: touch;
+position: relative;
+}
+.main-image{
+    height: auto; 
+    box-shadow: 5px solid white;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, .25);      
+}
+.main-image--back{
+    background-color: #ff5252;
+    border: 5px solid white;
+    box-shadow: 5px solid black; 
+}
+.main-image.--left{
+    transform: rotate(-5deg);
+    border: 8px solid #fff;
+    border-color: rgb(255, 255, 255);
+}
+.main-image.--left :hover{
+    transform: rotate(5deg);
+}
+
+.main-image.--center{
+    transform: rotate(4deg);
+    border: 8px solid #fff;
+    border-color: rgb(255, 255, 255);
+    height: 60%;
+}
+.main-image.--center :hover{
+    transform: rotate(-4deg); 
+    height: 60%;
+}  
+.main-image.--right{
+    transform: rotate(4deg);
+    border: 8px solid #fff;
+    border-color: rgb(255, 255, 255);
+}
+.main-image.--right :hover{
+    transform: rotate(-4deg); 
+    height: 130%;
+} 
+.separator{
+    margin-top: 2% !important;
+    margin-bottom: 2% !important;
+}
+
+.invitation.--center {
+    background: #fafafa !important;
+    font-family: 'Lora';
+    z-index: 4;
+} 
+.invitation.--center  :before {
+    background: #ff5252 !important;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+    left: -5px;
+    top: 4px;
+    transform: rotate(-4deg);
+    content: "";
+height: 98%;
+position: absolute;
+width: 100%;
+z-index: -1;
+border-color: 5px solid white;
+background-color: turquoise;
+}
+
+.section--separator :before{
+    content: "";
+height: 120px;
+width: 100%;
+position: absolute;
+background: url("http://ingridkuhn.com/themes/liebe_html/css/../img/ornaments/watercolor1.png") repeat-x top left;
+margin-top: -130px;
+z-index: 999;
+}
+
+.hr {
+    border-top: 1px dotted;
+    text-align: center;
+    max-width: 100px;
+    margin-top: 20px;
+    margin: 0 auto;
+    margin-bottom: 0px;
+    margin-bottom: 40px;
+}
+.hr :after{
+    content: '\f004';
+font-family: FontAwesome;
+display: inline-block;
+position: relative;
+top: -20px;
+padding: 0 10px;
+font-size: 28px;
+}
+
+
+  
+#clockdiv{
+	font-family: sans-serif;
+	color: #026e71;
+	display: inline-block;
+	font-weight: 100;
+	text-align: center;
+    font-size: 30px;
+    width: 100%;
+    margin: auto;
+    margin-top: 1%; 
+    margin-bottom: 1%;
+}
+
+#clockdiv > div{
+	padding: 10px;
+	border-radius: 3px;
+	/*background: #ec9797;*/
+	display: inline-block;
+}
+
+#clockdiv div > span{
+	padding: 15px;
+	border-radius: 3px;
+	background: #ec9797;
+	display: inline-block;
+}
+
+.smalltext{
+	padding-top: 5px;
+    font-size: 16px; 
+}
+
+
+/*phone*/
+@media (max-width: 599px) { 
+    h1{ 
+        font-size: 25px; 
+        line-height: 30px;  
+        letter-spacing: -1px; 
+    }
+    h2 {
+        font-size: 17px; 
+        margin-bottom: 10px;
+        margin-top: 0px;
+        font-weight: 700; 
+    }
+    h3 {
+        font-size: 10px; 
+        margin-bottom: 10px;
+        margin-top: 0px;
+        font-weight: 500; 
+    }
+
+
+    #clockdiv{
+         
+        font-weight: 100; 
+        font-size: 20px; 
+    }
+
+    #clockdiv div > span{
+        padding: 11px; 
+    }
+
+    .smalltext{
+        padding-top: 5px;
+        font-size: 12px; 
+    }
+ } 
+    /*tablet*/
+  @media (min-width: 600px) {  
+    h1{
+        font-family: 'Lora' , sans-serif;
+        font-size: 50px; 
+        line-height: 90px;  
+        font-weight: 500;
+    }
+    h2 {
+        font-size: 40px; 
+        margin-bottom: 40px;
+        margin-top: 0px;
+        font-weight: 700; 
+    }
+    h3 {
+        font-size: 30px; 
+        margin-bottom: 40px; 
+        font-weight: 500;  
+    }
+    .form-class{
+        margin: auto;
+    }
+    .italic { 
+        font-size: 90px; 
+      }
+   }  
+  /*desktop */
+  @media (min-width: 900px) {  
+
+    h1{
+        font-family: 'Lora' , sans-serif;
+        font-size: 70px; 
+        line-height: 90px;  
+        font-weight: 500;
+    }
+    h2 {
+        font-size: 50px; 
+        margin-bottom: 40px;
+        margin-top: 0px;
+        font-weight: 400; 
+    }
+    h3 {
+        font-size: 40px; 
+        margin-bottom: 40px; 
+        font-weight: 300;  
+    }
+    .italic { 
+      font-size: 120px; 
+    }
+  }  
+
+
+
+

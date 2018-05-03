@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link href='https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons' rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Lora|Playfair Display" rel="stylesheet">
+  <link href="https://unpkg.com/vuetify/dist/vuetify.min.css" rel="stylesheet">
+  <link href="style.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg"
+    crossorigin="anonymous">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+  <meta charset="utf-8"/>
+</head>
+
+<body>
+  <div id="app">
+    <v-app>
+      <v-content class="container-wrapper">
+        <v-container>
+          <v-toolbar color="#c5bad3">
+            <v-spacer></v-spacer>
+            <v-toolbar-items>
+              <v-btn flat>Invitation</v-btn>
+              <v-btn flat>Reservation</v-btn> 
+            </v-toolbar-items>
+          </v-toolbar>
+          <v-container fluid grid-list-md>
+            <v-layout row wrap class="separator">
+              <v-flex d-flex xs12 md4 class="main-image--back">
+                <v-card dark class="main-image --left">
+                  <v-card-media class="white--text" height="200px" src="img/img-couple-2.jpg">
+                    <v-container fill-height fluid>
+                      <v-layout fill-height>
+                        <v-flex xs12 align-end flexbox> 
+                        </v-flex>
+                      </v-layout>
+                    </v-container>
+                  </v-card-media>
+                </v-card>
+              </v-flex>
+              <v-flex d-flex md4 class="main-image--back">
+                <v-card dark class="main-image --center">
+                  <v-card-media class="white--text" height="200px" src="img/img-couple-1.jpg">
+                    <v-container fill-height fluid>
+                      <v-layout fill-height>
+                        <v-flex xs12 align-end flexbox> 
+                        </v-flex>
+                      </v-layout>
+                    </v-container>
+                  </v-card-media>
+                </v-card>
+              </v-flex>
+              <v-flex d-flex md4 class="main-image--back">
+                <v-card dark class="main-image --right">
+                  <v-card-media class="white--text" height="200px" src="img/img-couple-3.jpg">
+                    <v-container fill-height fluid>
+                      <v-layout fill-height>
+                        <v-flex xs12 align-end flexbox> 
+                        </v-flex>
+                      </v-layout>
+                    </v-container>
+                  </v-card-media>
+                </v-card>
+              </v-flex>
+            </v-layout>
+            <v-layout row wrap class="separator">
+              <h1 class="text-md-center"> Renange 
+                <span class="italic"> & </span>  Michelet</h1>
+            </v-layout>
+            <v-layout row wrap>
+              <v-flex d-flex xs12>
+                <v-card id="#invitation " class="invitation --center"> 
+                  <v-card-text class="text-xs-center">
+                    <h2>Invitation </h2>
+                    
+                      
+                    <h3>28 Juin 2018</h3> 
+                    <div class="hr"></div>
+                    <p>
+                      <blockquote> “Les vicissitudes de la vie ne pourraient éteindre l'amour“</blockquote>
+                      <br/> Nous ne seront plus deux mais une seule chair.
+                      <br/>La famille Fils- Aimé et la famille Jacob ont le plaisir de vous faire part de la decision de leurs
+                      enfants. Renange et Michelet De s'embrasser dans le lien du mariage. En fat, elles ont l'honneur de
+                      vous convier dans la cérémonie nuptiale de leurs enfants qui Se tiendra, le 28 Juin 2018 à la Paroisse
+                      St Martin de Tour à Delmas 5&6 à 10h AM.</p>
+                  </v-card-text>
+                </v-card>
+              </v-flex>
+            </v-layout>
+            <v-layout row wrap>
+              <v-flex d-flex xs12 sm6 md10 class="form-class">
+                  <v-container grid-list-md center>
+                      <form action="https://formspree.io/petersonjean45@gmail.com" method="POST"> 
+                      <v-layout row wrap> 
+                        <v-flex xs12 sm6>
+                          <v-text-field box label="Prénom" ></v-text-field>
+                        </v-flex>
+                        <v-flex xs12 sm6>
+                          <v-text-field box label="Nom" ></v-text-field>
+                        </v-flex>
+                        <v-flex xs12>
+                          <v-text-field
+                            box
+                            label="Email"  
+                            persistent-hint
+                          ></v-text-field>
+                        </v-flex>
+                        <v-flex xs12 color="white">
+                            <v-radio-group   :mandatory="false">
+                              <v-layout row wrap class="center">
+                                <v-flex xs12 md6>
+                                    <v-radio label="Accepter avec plaisir" value="Accepter avec plaisir"></v-radio>
+                                </v-flex>
+                                <v-flex xs12 md6>
+                                    <v-radio label="Refuser avec regrets" value="Refuser avec regrets"></v-radio>
+                                  </v-flex> 
+                              </v-layout> 
+                              </v-radio-group>
+                        </v-flex>
+                        <v-flex xs12>
+                            <v-btn large color="error" type="submit">Envoyer</v-btn>
+                        </v-flex> 
+                      </v-layout>
+                      </form>
+                    </v-container>
+                
+              </v-flex> 
+            </v-layout>
+          </v-container>
+            
+        </v-container>
+
+      </v-content>
+    </v-app>
+  </div>
+  <div id="clockdiv">
+      <h1>Jour J</h1>
+      <div>
+        <span class="days"></span>
+        <div class="smalltext">Days</div>
+      </div>
+      <div>
+        <span class="hours"></span>
+        <div class="smalltext">Hours</div>
+      </div>
+      <div>
+        <span class="minutes"></span>
+        <div class="smalltext">Minutes</div>
+      </div>
+      <div>
+        <span class="seconds"></span>
+        <div class="smalltext">Seconds</div>
+      </div>
+    </div>
+    <footer>
+      <span class="center"><h5>©2018 - Peterson JEAN</h5></span>
+    </footer>
+
+  <script src="https://unpkg.com/vue/dist/vue.js"></script>
+  <script src="https://unpkg.com/vuetify/dist/vuetify.js"></script>
+  <script src="js/jquery.countdown.min.js"></script>
+  <script>
+    new Vue({ el: '#app' }); 
+  </script>
+</body>
+
+</html>
