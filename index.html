@@ -3,7 +3,7 @@
 
 <head>
   <link href='https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons' rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Lora|Playfair Display" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Lora|Playfair Display|Oswald" rel="stylesheet">
   <link href="https://unpkg.com/vuetify/dist/vuetify.min.css" rel="stylesheet">
   <link href="style.css" rel="stylesheet">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg"
@@ -17,11 +17,12 @@
     <v-app>
       <v-content class="container-wrapper">
         <v-container>
-          <v-toolbar color="#c5bad3">
+          <v-toolbar color="#c5bad3" >
             <v-spacer></v-spacer>
             <v-toolbar-items>
-              <v-btn flat>Invitation</v-btn>
-              <v-btn flat>Reservation</v-btn> 
+              <v-btn flat  href="#invitation" >Invitation</v-btn>
+              <v-btn flat  href="#reservation">Reservation</v-btn> 
+              <v-btn flat href="#jour-je">Jour J</v-btn> 
             </v-toolbar-items>
           </v-toolbar>
           <v-container fluid grid-list-md>
@@ -69,17 +70,17 @@
             </v-layout>
             <v-layout row wrap>
               <v-flex d-flex xs12>
-                <v-card id="#invitation " class="invitation --center"> 
+                <v-card id="invitation " class="invitation --center"> 
                   <v-card-text class="text-xs-center">
                     <h2>Invitation </h2>
                     
                       
                     <h3>28 Juin 2018</h3> 
-                    <div class="hr"></div>
-                    <p>
-                      <blockquote> “Les vicissitudes de la vie ne pourraient éteindre l'amour“</blockquote>
-                      <br/> Nous ne seront plus deux mais une seule chair.
-                      <br/>La famille Fils- Aimé et la famille Jacob ont le plaisir de vous faire part de la decision de leurs
+                    <div class="hr"> </div> 
+                      <blockquote> “Les vicissitudes de la vie ne pourraient éteindre l'amour“
+                      <br/> “Nous ne seront plus deux mais une seule chair."</blockquote>
+                      <div class="hr"></div> 
+                      <br/><p class="text">La famille Fils- Aimé et la famille Jacob ont le plaisir de vous faire part de la decision de leurs
                       enfants. Renange et Michelet De s'embrasser dans le lien du mariage. En fat, elles ont l'honneur de
                       vous convier dans la cérémonie nuptiale de leurs enfants qui Se tiendra, le 28 Juin 2018 à la Paroisse
                       St Martin de Tour à Delmas 5&6 à 10h AM.</p>
@@ -90,13 +91,14 @@
             <v-layout row wrap>
               <v-flex d-flex xs12 sm6 md10 class="form-class">
                   <v-container grid-list-md center>
+                    <h1 id="reservation">Reservation</h1>
                       <form action="https://formspree.io/petersonjean45@gmail.com" method="POST"> 
                       <v-layout row wrap> 
                         <v-flex xs12 sm6>
-                          <v-text-field box label="Prénom" ></v-text-field>
+                          <v-text-field box label="Prénom" name="Prenom"></v-text-field>
                         </v-flex>
                         <v-flex xs12 sm6>
-                          <v-text-field box label="Nom" ></v-text-field>
+                          <v-text-field box label="Nom" name="Nom" ></v-text-field>
                         </v-flex>
                         <v-flex xs12>
                           <v-text-field
@@ -109,7 +111,7 @@
                             <v-radio-group   :mandatory="false">
                               <v-layout row wrap class="center">
                                 <v-flex xs12 md6>
-                                    <v-radio label="Accepter avec plaisir" value="Accepter avec plaisir"></v-radio>
+                                    <v-radio label="Accepter avec plaisir"  value="Accepter avec plaisir"></v-radio>
                                 </v-flex>
                                 <v-flex xs12 md6>
                                     <v-radio label="Refuser avec regrets" value="Refuser avec regrets"></v-radio>
@@ -125,16 +127,16 @@
                     </v-container>
                 
               </v-flex> 
+              
             </v-layout>
-          </v-container>
-            
+          </v-container> 
         </v-container>
 
       </v-content>
     </v-app>
   </div>
   <div id="clockdiv">
-      <h1>Jour J</h1>
+      <h1 id="jour-j">Jour J</h1>
       <div>
         <span class="days"></span>
         <div class="smalltext">Days</div>
@@ -153,14 +155,38 @@
       </div>
     </div>
     <footer>
+        <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button> 
       <span class="center"><h5>©2018 - Peterson JEAN</h5></span>
     </footer>
 
   <script src="https://unpkg.com/vue/dist/vue.js"></script>
   <script src="https://unpkg.com/vuetify/dist/vuetify.js"></script>
+  <script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
   <script src="js/jquery.countdown.min.js"></script>
   <script>
-    new Vue({ el: '#app' }); 
+    Vue.use(VueRouter);
+    let router = new VueRouter();
+    new Vue({ el: '#app',router }); 
+
+    window.onscroll = function() {scrollFunction()};
+
+    function scrollFunction() {
+      document.getElementById("myBtn").style.transitionTimingFunction = "easeInOutQuad";
+      document.getElementById("myBtn").style.transition = "0.2s";
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            document.getElementById("myBtn").style.display = "block"; 
+        } else {
+            document.getElementById("myBtn").style.display = "none";
+        }
+
+    }
+
+    // When the user clicks on the button, scroll to the top of the document
+    function topFunction() {
+        document.body.scrollTop = 0; // For Safari
+        document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+    } 
+    
   </script>
 </body>
 
