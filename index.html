@@ -3,11 +3,14 @@
 
 <head>
   <link href='https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons' rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Lora|Playfair Display|Oswald" rel="stylesheet">
-  <link href="https://unpkg.com/vuetify/dist/vuetify.min.css" rel="stylesheet">
-  <link href="style.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Lora|Playfair Display|Oswald" rel="stylesheet"> 
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg"
     crossorigin="anonymous">
+  <link href="https://unpkg.com/vuetify/dist/vuetify.min.css" rel="stylesheet">
+  <script src="https://cdn.polyfill.io/v2/polyfill.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-polyfill/6.26.0/polyfill.min.js"></script>
+  <link href="style.css" rel="stylesheet">
+  
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
   <meta charset="utf-8"/>
 </head>
@@ -83,7 +86,7 @@
                       <br/><p class="text">La famille Fils- Aimé et la famille Jacob ont le plaisir de vous faire part de la decision de leurs
                       enfants. Renange et Michelet De s'embrasser dans le lien du mariage. En fait, elles ont l'honneur de
                       vous convier dans la cérémonie nuptiale de leurs enfants qui Se tiendra, le 28 Juin 2018 à la Paroisse
-                      St Martin de Tour à Delmas 5&6 à 10h AM.</p>
+                      St Martin de Tour à Delmas 5 et 6 à 10h AM.</p>
                   </v-card-text>
                 </v-card>
               </v-flex>
@@ -160,7 +163,7 @@
       <span class="center"><h5>©2018 - Peterson JEAN</h5></span>
     </footer>
   
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-polyfill/6.26.0/polyfill.min.js"></script>
+  
   <script src="https://unpkg.com/vue/dist/vue.js"></script>
   <script src="https://unpkg.com/vuetify/dist/vuetify.js"></script>
   <script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
@@ -168,7 +171,7 @@
   <script>
     Vue.use(VueRouter);
     let router = new VueRouter();
-    new Vue({ el: '#app',router }); 
+    new Vue({ el: '#app' }); 
 
     window.onscroll = function() {scrollFunction()};
 
